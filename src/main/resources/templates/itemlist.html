@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>商品一覧</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>商品一覧</h1>
+	<div>
+    	いらっしゃいませ！
+	</div>
+	<br />
+	<form method="post" action="formPost">
+	</form>
+<h1>商品一覧</h1>
+<table>
+    <tr>
+        <th>商品番号</th>
+        <th>商品名</th>
+        <th>価格</th>
+        <th>個数</th>
+    </tr>
+    <tr th:each="object:${ListService}">
+        <td th:text="{id}"></td>
+        <td th:text="{name}"></td>
+        <td th:text="{price}"></td>
+        <td><input type="text" name="name" /></td>
+    </tr>
+</table>
+<input type="submit" value="送信">
+
+
+</body>
+</html>
